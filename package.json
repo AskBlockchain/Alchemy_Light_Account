@@ -1,0 +1,24 @@
+{
+  "name": "alchemy_accountkit",
+  "version": "1.0.0",
+  "description": "An Example Using Account Kit",
+  "main": "index.ts",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kaz",
+  "license": "ISC",
+  "dependencies": {
+    "@alchemy/aa-accounts": "^1.2.0",
+    "@alchemy/aa-alchemy": "^1.2.0",
+    "@alchemy/aa-core": "^1.2.0",
+    "@web3auth/modal": "^7.1.1",
+    "alchemy-sdk": "^3.0.0",
+    "viem": "^1.19.3"
+  },
+  "devDependencies": {
+    "@chainlink/env-enc": "^1.0.5",
+    "typescript": "^5.2.2"
+  }
+}
