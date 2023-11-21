@@ -33,7 +33,7 @@
     // (e.g. Get Sepolia ETH at https://sepoliafaucet.com)
     console.log("Smart Account Address: ", await provider.getAddress()); // Log the smart account address
 
-    // const vitalikAddress = "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045" as Address;
+    const vitalikAddress = "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045" as Address;
     // Send a user operation from your smart account to Vitalik that does nothing
 
 
