@@ -37,7 +37,7 @@
     // Send a user operation from your smart account to Vitalik that does nothing
 
 
-    const myAddress = "0xbC4017d47E64678baf2aA98F0F1A8C6E3Ca8D3f8";
+    const myAddress = "0xbC4017d47E64678baf2aA98F0F1A8C6E3Ca8D3f8"; // Your EOA Public Key/Address
 
 
     const { hash: uoHash } = await provider.sendUserOperation({
