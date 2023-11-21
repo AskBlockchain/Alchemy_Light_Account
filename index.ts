@@ -42,8 +42,8 @@
 
     const { hash: uoHash } = await provider.sendUserOperation({
     target: myAddress, // The desired target contract address
-    data: "0x", // The desired call data
-    value: 0n, // (Optional) value to send the target contract address
+    data: "0x7472616e73616374696f6e44617461", // The desired call data
+    value: 1000n, // (Optional) value to send the target contract address
   });
 
     console.log("UserOperation Hash: ", uoHash); // Log the user operation hash
