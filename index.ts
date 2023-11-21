@@ -3,6 +3,7 @@
   import { LocalAccountSigner, type Hex } from "@alchemy/aa-core";
   import { polygonMumbai, sepolia } from "viem/chains";
   import * as dotenvenc from '@chainlink/env-enc'
+  import { maxUint256, parseEther } from "viem";
   dotenvenc.config();
   
   const chain = sepolia;
@@ -36,14 +37,16 @@
     const vitalikAddress = "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045" as Address;
     // Send a user operation from your smart account to Vitalik that does nothing
 
+    const amountToSend: bigint = parseEther("0.0011");
+
 
     const myAddress = "0xbC4017d47E64678baf2aA98F0F1A8C6E3Ca8D3f8"; // Your EOA Public Key/Address
 
 
     const { hash: uoHash } = await provider.sendUserOperation({
     target: myAddress, // The desired target contract address
-    data: "0x7472616e73616374696f6e44617461", // The desired call data
-    value: 1000n, // (Optional) value to send the target contract address
+    data: "0x", // The desired call data
+    value: amountToSend, // (Optional) value to send the target contract address
   });
 
     console.log("UserOperation Hash: ", uoHash); // Log the user operation hash
