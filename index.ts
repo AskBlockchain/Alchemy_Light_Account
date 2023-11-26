@@ -34,13 +34,14 @@
     // (e.g. Get Sepolia ETH at https://sepoliafaucet.com)
     console.log("Smart Account Address: ", await provider.getAddress()); // Log the smart account address
 
-    const vitalikAddress = "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045" as Address;
+    // const vitalikAddress = "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045" as Address;
     // Send a user operation from your smart account to Vitalik that does nothing
 
-    const amountToSend: bigint = parseEther("0.0011");
+    const amountToSend: bigint = parseEther("0.1");
 
 
-    const myAddress = "0xbC4017d47E64678baf2aA98F0F1A8C6E3Ca8D3f8"; // Your EOA Public Key/Address
+    const myAddress = "0x87D51f8aB6c2CAd50D377A3f95320BC5DC69729B"; // Your EOA Public Key/Address
+    const contractAddress = "0x1C8c296EB0C9eb411102779339eEBff884AA2016"
 
 
     const { hash: uoHash } = await provider.sendUserOperation({
@@ -50,9 +51,11 @@
   });
 
     console.log("UserOperation Hash: ", uoHash); // Log the user operation hash
+    
 
     // Wait for the user operation to be mined
     const txHash = await provider.waitForUserOperationTransaction(uoHash);
 
   console.log("Transaction Hash: ", txHash); // Log the transaction hash
+  console.log("Value ", amountToSend)
   })();
